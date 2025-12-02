@@ -22,9 +22,9 @@ This project addresses all five core components of CSE 158 Assignment 2:
 
 ### 2. Predictive Tasks
 
-#### Task 1: Citation Prediction (Classification)
-- **Goal**: Predict whether paper A will cite paper B
-- **Features**: Temporal features, author overlap, venue similarity, textual similarity, citation context
+#### Task 1: Citation Prediction (Regression)
+- **Goal**: Predict the citation count (effectively the popularity) of a paper
+- **Features**: Textual similarity, categorical difference, temporal features, author overlap, etc.
 - **Evaluation**: Accuracy, Precision, Recall, F1-score, AUC-ROC
 
 #### Task 2: Paper Recommendation (Ranking)
@@ -36,11 +36,10 @@ This project addresses all five core components of CSE 158 Assignment 2:
 
 #### Baseline Models:
 - Random baseline
-- Popularity-based recommendation
-- Jaccard similarity (author/venue overlap)
+- KNN
+- Linear Regression
 
 #### Advanced Models:
-- Logistic Regression with engineered features
 - Collaborative Filtering (matrix factorization)
 - Graph-based methods (PageRank, Node2Vec)
 - Text-based models (TF-IDF, embeddings)
@@ -59,40 +58,6 @@ This project addresses all five core components of CSE 158 Assignment 2:
 - Error analysis and failure cases
 - Insights into citation patterns
 - Conclusions and future work
-
-## Repository Structure
-
-```
-CSE158-Paper-Project/
-├── README.md                 # This file
-├── data/                     # Data directory (gitignored)
-│   ├── raw/                 # Raw OpenAlex data
-│   ├── processed/           # Processed features
-│   └── splits/              # Train/validation/test splits
-├── notebooks/               # Jupyter notebooks
-│   ├── 01_exploratory_analysis.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_baseline_models.ipynb
-│   ├── 04_advanced_models.ipynb
-│   └── 05_results_analysis.ipynb
-├── src/                     # Source code
-│   ├── data_loader.py      # OpenAlex data loading
-│   ├── preprocessing.py    # Data cleaning and preprocessing
-│   ├── features.py         # Feature engineering
-│   ├── models.py           # Model implementations
-│   ├── evaluation.py       # Evaluation metrics
-│   └── utils.py            # Utility functions
-├── scripts/                 # Standalone scripts
-│   ├── download_data.sh    # Script to download OpenAlex subset
-│   └── train_model.py      # Training script
-├── results/                 # Results and figures
-│   ├── figures/            # Plots and visualizations
-│   └── metrics/            # Performance metrics
-├── report/                  # Final report
-│   └── assignment2_report.pdf
-├── requirements.txt         # Python dependencies
-└── .gitignore              # Git ignore file
-```
 
 ## Setup Instructions
 

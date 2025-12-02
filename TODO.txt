@@ -1,0 +1,17 @@
+# Citation prediction
+- Given a paper, predict the number of citations it will get (popularity effectively)
+
+## Baseline models
+- Linear regression
+- Weighted KNN with custom similarity vector
+
+## Recommender systems based methods
+- Matrix Factorization
+- Graph-based recommender
+- Combining models (with weights)
+
+## Advanced
+- Temporal features: the closer another paper is, the more it should weight
+
+# Recommendation system
+- Given a topic (category list), give top k most relevant papers
